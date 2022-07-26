@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web App</title>
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <h1><%= username%></h1>
+    <% count=0 , data.forEach(entry => { %>
+        <h2><%= entry%></h2>
+        <p>item number<%= count %></p>
+    <% count++}) %>
+
+    <div class="break"></div>
+    <% if(page > 1) { %> <a href="/<%=id%>/<%=page-1%>">Previous</a> <% } %>
+    <% if(page >= 1) { %> <a href="/<%=id%>/<%=Number(page)+1%>">Next</a> <% } %>
+    <a href="/<%=id%>/<%=page%>/changeuname"><br>Change Username</a>
+</body>
+</html>

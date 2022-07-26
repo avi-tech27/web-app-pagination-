@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Change Username</h2>
+
+<form action="/<%=id%>/<%=page%>/changed" method="post">
+  <label for="uname">New Username:</label><br>
+  <input type="text" id="uname" name="uname" value="John"><br>
+  <label for="id">Your id:</label><br>
+  <input type="text" id="id" name="id" value="<%=id%>"><br>
+  <input type="submit" value="Submit">
+</form> 
+
+</body>
+</html>
